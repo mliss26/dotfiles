@@ -1,0 +1,27 @@
+#!/bin/bash
+
+dotfiles=(
+    .bash_functions
+    .bashrc
+    .gitconfig
+    .gitignore_global
+    .guile
+    .inputrc
+    .pystartup
+    .telnetrc
+    .tmux.conf
+    .vim
+    .Xresources
+)
+
+cd
+
+for df in ${dotfiles[@]}; do
+    [ -f $df ] && rm -f $df
+    ln -s .dotfiles/$df .
+done
+
+ln -s .vim/.vimrc .
+mkdir -p .config
+cd .config
+ln -s ~/.vim nvim

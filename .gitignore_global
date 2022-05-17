@@ -1,0 +1,9 @@
+**.swp
+**.swo
+**.swn
+**.pyc
+**__pycache__
+source_files
+cscope.out
+tags
+types_*.taghl

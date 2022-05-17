@@ -1,0 +1,48 @@
+[user]
+	name = Matt Liss
+	email = matt@ejtheta.net
+[diff]
+	tool = mydiff
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[difftool]
+	prompt = false
+[difftool "mydiff"]
+	cmd = /home/mliss/workspace/bin/difftool "$LOCAL" "$REMOTE"
+	trustExitCode = true
+[mergetool "nvimdiff"]
+	cmd = nvim -d "$LOCAL" "$BASE" "$REMOTE" "$MERGED"
+[mergetool "splice"]
+	cmd = vim -f "$BASE" "$LOCAL" "$REMOTE" "$MERGED" -c 'SpliceInit'
+	trustExitCode = true
+[format]
+	numbered = auto
+[color]
+	ui = auto
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[core]
+	excludesfile = /home/mliss/.gitignore_global
+[push]
+	default = matching
+[branch]
+	autosetuprebase = always
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
