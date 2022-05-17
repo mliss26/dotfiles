@@ -140,7 +140,7 @@ alias scp-nohostkey='scp -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChec
 [[ -f "${HOME}/.bashrc_`hostname`" ]] && . "${HOME}/.bashrc_`hostname`"
 
 export EDITOR="vim"
-export PATH=~/bin:~/workspace/bin:$PATH
+export PATH=~/bin:~/workspace/github/devtools:~/workspace/bin:$PATH
 
 # sigrok config
 export SIGROKDECODE_DIR=/home/mliss/.libsigrokdecode

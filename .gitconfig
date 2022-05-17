@@ -9,7 +9,7 @@
 [difftool]
 	prompt = false
 [difftool "mydiff"]
-	cmd = /home/mliss/workspace/bin/difftool "$LOCAL" "$REMOTE"
+	cmd = difftool "$LOCAL" "$REMOTE"
 	trustExitCode = true
 [mergetool "nvimdiff"]
 	cmd = nvim -d "$LOCAL" "$BASE" "$REMOTE" "$MERGED"
