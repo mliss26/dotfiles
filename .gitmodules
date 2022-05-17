@@ -1,0 +1,30 @@
+[submodule ".vim/bundle/vim-easycolour"]
+	path = .vim/bundle/vim-easycolour
+	url = https://github.com/skroll/vim-easycolour.git
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule ".vim/bundle/ctrlp"]
+	path = .vim/bundle/ctrlp
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule ".vim/bundle/vim-airline"]
+	path = .vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule ".vim/bundle/vim-fugitive"]
+	path = .vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule ".vim/bundle/vim-misc"]
+	path = .vim/bundle/vim-misc
+	url = https://github.com/xolox/vim-misc.git
+[submodule ".vim/bundle/vim-openscad"]
+	path = .vim/bundle/vim-openscad
+	url = https://github.com/sirtaj/vim-openscad.git
+[submodule ".vim/bundle/vim-sleuth"]
+	path = .vim/bundle/vim-sleuth
+	url = https://github.com/tpope/vim-sleuth.git
+[submodule ".vim/bundle/verilog_systemverilog.vim"]
+	path = .vim/bundle/verilog_systemverilog.vim
+	url = https://github.com/vhda/verilog_systemverilog.vim.git
+[submodule ".vim/bundle/csapprox"]
+	path = .vim/bundle/csapprox
+	url = https://github.com/godlygeek/csapprox.git
