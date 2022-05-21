@@ -28,3 +28,6 @@
 [submodule ".vim/bundle/csapprox"]
 	path = .vim/bundle/csapprox
 	url = https://github.com/godlygeek/csapprox.git
+[submodule ".vim/bundle/supertab"]
+	path = .vim/bundle/supertab
+	url = https://github.com/ervandew/supertab.git
