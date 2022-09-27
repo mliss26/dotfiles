@@ -1,6 +1,6 @@
 [submodule ".vim/bundle/vim-easycolour"]
 	path = .vim/bundle/vim-easycolour
-	url = git@github.com:mliss26/vim-easycolour.git
+	url = https://github.com/mliss26/vim-easycolour.git
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = https://github.com/preservim/nerdtree.git
