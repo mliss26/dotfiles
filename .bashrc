@@ -129,6 +129,8 @@ alias curlpostjson='curl -w "\ncode: %{http_code}\n" -X POST -H "Content-Type: a
 alias ssh-nohostkey='ssh -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 alias scp-nohostkey='scp -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 
+alias flvpn='sudo openvpn --config .config/flSense-UDP4-1194-matt.liss-config.ovpn'
+
 # Functions
 #
 # Source bash functions from their own file
@@ -140,7 +142,7 @@ alias scp-nohostkey='scp -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChec
 [[ -f "${HOME}/.bashrc_`hostname`" ]] && . "${HOME}/.bashrc_`hostname`"
 
 export EDITOR="vim"
-export PATH=~/bin:~/workspace/github/devtools:~/workspace/bin:$PATH
+export PATH=~/bin:~/workspace/github/devtools:~/workspace/bin:~/.local/bin:$PATH
 
 # sigrok config
 export SIGROKDECODE_DIR=/home/mliss/.libsigrokdecode
