@@ -26,6 +26,10 @@ del os, atexit, readline, rlcompleter, save_history, historyPath
 
 import math
 import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import style
+
+style.use('dark_background')
 
 def in2mm(inches):
     return inches * 25.4
