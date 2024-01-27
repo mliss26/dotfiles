@@ -61,11 +61,19 @@ EOF
 set background=dark
 colorscheme bandit
 
+" Invisible character colors
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
+
+" updates to LSP highlighting
 hi link @lsp.type.macro DefinedName
 hi link @lsp.type.label Label
+hi link @lsp.type.enum.cpp EnumerationName
+hi link @lsp.type.enumMember EnumerationValue
 hi link @lsp.mod.readonly Constant
 hi link @lsp.typemod.variable.functionScope LocalVariable
 hi link @lsp.typemod.variable.globalScope GlobalVariable
+hi link @lsp.typemod.enumMember.globalScope EnumerationValue
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" General settings
@@ -74,6 +82,11 @@ hi link @lsp.typemod.variable.globalScope GlobalVariable
 set number      " always display line numbering
 set nobackup    " do not keep a backup file, use versions instead
 set cindent     " always use c-indenting style
+set ignorecase
+set clipboard=unnamedplus
+
+" Use the same symbols as TextMate for tabstops and EOLs
+"set listchars=tab:*\ ,eol:¬
 
 " Show trailing whitepace and spaces before a tab
 highlight default ExtraWhitespace ctermbg=red guibg=red
@@ -260,7 +273,6 @@ endif " has("autocmd")
 "scriptencoding utf-8
 "set encoding=utf-8
 "
-"set clipboard=unnamedplus
 "
 "" allow backspacing over everything in insert mode
 "set backspace=indent,eol,start
@@ -274,19 +286,11 @@ endif " has("autocmd")
 "  set shell=/bin/bash
 "endif
 "set hidden
-"set ignorecase
 "set expandtab
 "set winwidth=50
 "set switchbuf=useopen,usetab
 "set wrap
 "set lazyredraw
-"
-"" Use the same symbols as TextMate for tabstops and EOLs
-"set listchars=tab:*\ ,eol:¬
-"
-""Invisible character colors
-"highlight NonText guifg=#4a4a59
-"highlight SpecialKey guifg=#4a4a59
 "
 "" ex command for toggling hex mode - define mapping if desired
 "command! -bar Hexmode call ToggleHex()

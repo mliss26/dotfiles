@@ -24,4 +24,4 @@ done
 ln -s .vim/.vimrc .
 mkdir -p .config
 cd .config
-ln -s ~/.dotfiles/nvim .
+ln -s ~/.vim nvim
