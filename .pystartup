@@ -7,8 +7,13 @@
 
 import atexit
 import os
+import ctypes
 import readline
 import rlcompleter
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+
 
 historyPath = os.path.expanduser("~/.pyhistory")
 
@@ -42,4 +47,37 @@ def c2f(c):
 
 def f2c(f):
     return (f - 32) * 5/9
+
+def plot(*args, **kwargs):
+    plt.plot(*args, **kwargs)
+    plt.grid(True, which='major', axis='both', color='#505050')
+    plt.grid(True, which='minor', axis='both', color='#303030')
+    plt.minorticks_on()
+    #plt.show()
+
+def semilogx(*args, **kwargs):
+    plt.semilogx(*args, **kwargs)
+    plt.grid(True, which='major', axis='both', color='#505050')
+    plt.grid(True, which='minor', axis='both', color='#303030')
+    plt.minorticks_on()
+    #plt.show()
+
+def semilogy(*args, **kwargs):
+    plt.semilogy(*args, **kwargs)
+    plt.grid(True, which='major', axis='both', color='#505050')
+    plt.grid(True, which='minor', axis='both', color='#303030')
+    plt.minorticks_on()
+    #plt.show()
+
+def loglog(*args, **kwargs):
+    plt.loglog(*args, **kwargs)
+    plt.grid(True, which='major', axis='both', color='#505050')
+    plt.grid(True, which='minor', axis='both', color='#303030')
+    plt.minorticks_on()
+    #plt.show()
+
+def get_fft(x, fs=1):
+    X = np.fft.fftshift(np.fft.fft(x))/len(x)
+    f = np.fft.fftshift(np.fft.fftfreq(len(x), 1/fs))
+    return X, f
 
