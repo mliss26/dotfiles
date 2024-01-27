@@ -144,6 +144,9 @@ alias flvpn='sudo openvpn --config .config/flSense-UDP4-1194-matt.liss-config.ov
 export EDITOR="vim"
 export PATH=~/bin:~/workspace/github/devtools:~/workspace/bin:~/.local/bin:$PATH
 
+
+export CMAKE_EXPORT_COMPILE_COMMANDS=1
+
 # sigrok config
 export SIGROKDECODE_DIR=/home/mliss/.libsigrokdecode
 
