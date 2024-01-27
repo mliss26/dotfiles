@@ -1,1 +1,2 @@
-mode character
+DEFAULT mode character
+DEFAULT set crlf
