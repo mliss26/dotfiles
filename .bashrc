@@ -129,8 +129,6 @@ alias curlpostjson='curl -w "\ncode: %{http_code}\n" -X POST -H "Content-Type: a
 alias ssh-nohostkey='ssh -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 alias scp-nohostkey='scp -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 
-alias flvpn='sudo openvpn --config .config/flSense-UDP4-1194-matt.liss-config.ovpn'
-
 # Functions
 #
 # Source bash functions from their own file
