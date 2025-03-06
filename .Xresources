@@ -3,7 +3,7 @@ URxvt.saveLines: 200000
 URxvt.cutchars: "`\"'&()*,:;<=>?[\\]^{|}$"
 URxvt.depth: 32
 URxvt.foreground: rgb:e0/c3/ae
-URxvt.background: [95]#000000
+URxvt.background: [90]#000000
 URxvt.color0: rgb:00/00/00
 URxvt.color1: rgb:c0/00/00
 URxvt.color2: rgb:00/c0/00
@@ -21,7 +21,7 @@ URxvt.color13: rgb:fc/54/fc
 URxvt.color14: rgb:54/fc/fc
 URxvt.color15: rgb:fc/fc/fc
 URxvt.colorBD: rgb:fc/fc/fc
-URxvt.font: xft:JetBrains Mono:style=Regular:size=10
+URxvt.font: xft:JetBrains Mono:style=Regular:size=12
 URxvt.scrollBar: false
 URxvt.visualBell: true
 URxvt.fading: 15
