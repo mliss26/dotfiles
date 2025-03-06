@@ -171,3 +171,4 @@ else
     PS1='\[\e[0;33m\]\u\[\e[0;34m\]@\[\e[0;32m\]\h\[\e[0;36m\]:\w \$\[\e[0m\] '
     export PROMPT_COMMAND='__git_ps1 "$(rv=$?; if [ $rv -ne 0 ]; then echo -e "\[\e[0;31m\][\[\e[0m\]$rv\[\e[0;31m\]]"; fi)\[\e[0;33m\]\u\[\e[0;34m\]@\[\e[0;32m\]\h\[\e[0;36m\]:\W\[\e[0m\]" " \$ "'
 fi
+. "$HOME/.cargo/env"
