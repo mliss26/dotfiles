@@ -25,9 +25,9 @@ Plug 'ervandew/supertab'
 Plug 'williamboman/mason.nvim'
 
 " colorscheme plugins
-Plug 'mliss26/vim-easycolour'
-Plug 'godlygeek/csapprox'
-Plug 'powerman/vim-plugin-AnsiEsc'
+Plug 'mliss26/csapprox'
+"Plug 'powerman/vim-plugin-AnsiEsc'
+"Plug 'mliss26/vim-easycolour'
 
 " need neovim 0.8+
 Plug 'williamboman/mason-lspconfig.nvim'
@@ -46,11 +46,21 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 lua << EOF
 
-require"mason".setup{}
-require"mason-lspconfig".setup{}
+require("mason").setup{}
+require("mason-lspconfig").setup{}
 
-require"lspconfig".clangd.setup{}
-require'lspconfig'.pyright.setup{}
+local lsps = {
+	{ "pyright" },
+	{ "clangd" }
+}
+
+for _, lsp in pairs(lsps) do
+    local name, config = lsp[1], lsp[2]
+    vim.lsp.enable(name)
+    if config then
+        vim.lsp.config(name, config)
+    end
+end
 
 EOF
 
