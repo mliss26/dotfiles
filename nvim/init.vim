@@ -4,8 +4,8 @@
 
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
-	silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 " Run PlugInstall if there are missing plugins
@@ -23,6 +23,7 @@ Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'ervandew/supertab'
 Plug 'williamboman/mason.nvim'
+Plug 'nxhung2304/lastplace.nvim'
 
 " colorscheme plugins
 Plug 'mliss26/csapprox'
@@ -46,12 +47,13 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 lua << EOF
 
-require("mason").setup{}
-require("mason-lspconfig").setup{}
+require("mason").setup()
+require("mason-lspconfig").setup()
+require("lastplace").setup()
 
 local lsps = {
-	{ "pyright" },
-	{ "clangd" }
+    { "pyright" },
+    { "clangd" }
 }
 
 for _, lsp in pairs(lsps) do
@@ -166,10 +168,10 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set diffopt=filler,context:10
-highlight DiffAdd     term=reverse ctermbg=green ctermfg=black
-highlight DiffChange  term=reverse ctermbg=cyan  ctermfg=black
-highlight DiffText    term=reverse ctermbg=gray  ctermfg=black
-highlight DiffDelete  term=reverse ctermbg=red   ctermfg=black
+highlight DiffAdd     guibg=lightgreen      guifg=NvimDarkGrey3
+highlight DiffChange  guibg=cyan            guifg=NvimDarkGrey3
+highlight DiffText    guibg=NvimLightGrey3  guifg=NvimDarkGrey3
+highlight DiffDelete  guibg=lightred        guifg=NvimDarkGrey3
 
 nmap dl :diffget LO<CR>
 nmap dr :diffget RE<CR>
