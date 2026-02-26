@@ -1,0 +1,11 @@
+[window]
+decorations = "None"
+opacity = 0.9
+
+[font]
+size = 14
+
+[colors]
+
+[colors.primary]
+foreground = "#e0c3ae"
