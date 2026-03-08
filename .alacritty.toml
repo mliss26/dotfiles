@@ -9,3 +9,4 @@ size = 14
 
 [colors.primary]
 foreground = "#e0c3ae"
+background = "#000000"
